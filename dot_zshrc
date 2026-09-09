@@ -1,0 +1,63 @@
+# Keep each path only once even when tools add it repeatedly.
+typeset -U path PATH fpath FPATH
+
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+export LESS='-R'
+
+path=(
+  "$HOME/.local/bin"
+  "$HOME/.bun/bin"
+  "$HOME/.jenv/bin"
+  "$HOME/.pyenv/bin"
+  $path
+)
+
+export BUN_INSTALL="$HOME/.bun"
+export PYENV_ROOT="$HOME/.pyenv"
+
+command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
+command -v jenv >/dev/null && eval "$(jenv init -)"
+
+[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
+
+# Google Cloud SDK installed from the standalone archive.
+for cloud_sdk_dir in "$HOME/google-cloud-sdk" "$HOME/Downloads/google-cloud-sdk"; do
+  if [[ -d "$cloud_sdk_dir" ]]; then
+    [[ -f "$cloud_sdk_dir/path.zsh.inc" ]] && source "$cloud_sdk_dir/path.zsh.inc"
+    [[ -f "$cloud_sdk_dir/completion.zsh.inc" ]] && source "$cloud_sdk_dir/completion.zsh.inc"
+    break
+  fi
+done
+unset cloud_sdk_dir
+
+# Docker Desktop completions.
+if [[ -d "$HOME/.docker/completions" ]]; then
+  fpath=("$HOME/.docker/completions" $fpath)
+fi
+
+autoload -Uz compinit
+zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+if [[ ! -f "$zcompdump" || "$zcompdump" -ot /opt/homebrew/share/zsh/site-functions ]]; then
+  compinit -d "$zcompdump"
+else
+  compinit -C -d "$zcompdump"
+fi
+unset zcompdump
+
+command -v fzf >/dev/null && source <(fzf --zsh)
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+command -v starship >/dev/null && eval "$(starship init zsh)"
+
+syntax_highlighting=/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -r "$syntax_highlighting" ]] && source "$syntax_highlighting"
+unset syntax_highlighting
+
+alias ll='ls -lah'
+alias gs='git status --short --branch'
+alias gd='git diff'
+alias gl='git log --oneline --decorate --graph -20'
+alias vim='nvim'
+alias g++='g++-15'
+
