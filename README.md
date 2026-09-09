@@ -36,7 +36,7 @@ Neovim's leader key is Space. Useful mappings include:
 - `<leader>fb`: open buffers
 - `<leader>e`: file browser
 - `<leader>t`: terminal below
-- `<leader>?`: terminal on the right
+- `<leader>v`: terminal on the right
 - `<leader>gg`: Lazygit
 - `<leader>f`: format the current buffer
 - `gd`, `gr`, `K`: definition, references, documentation

@@ -15,6 +15,11 @@ return {
     opts = { options = { theme = "catppuccin", globalstatus = true } },
   },
   {
+    "nvim-tree/nvim-web-devicons",
+    lazy = true,
+    opts = { default = true },
+  },
+  {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {},
@@ -26,9 +31,13 @@ return {
   },
   {
     "stevearc/oil.nvim",
-    cmd = "Oil",
+    lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = { view_options = { show_hidden = true } },
+    opts = {
+      default_file_explorer = true,
+      columns = { "icon", "permissions", "size" },
+      view_options = { show_hidden = true },
+    },
     keys = { { "<leader>e", "<cmd>Oil<CR>", desc = "File browser" } },
   },
   {
@@ -51,4 +60,3 @@ return {
     keys = { { "<leader>gg", "<cmd>LazyGit<CR>", desc = "Lazygit" } },
   },
 }
-
