@@ -12,7 +12,14 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = { options = { theme = "catppuccin", globalstatus = true } },
+    opts = {
+      options = { theme = "catppuccin", globalstatus = true },
+      sections = {
+        lualine_c = {
+          { "filename", path = 1, shorting_target = 20 },
+        },
+      },
+    },
   },
   {
     "nvim-tree/nvim-web-devicons",
