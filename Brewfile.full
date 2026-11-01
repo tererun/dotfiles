@@ -107,6 +107,8 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
+brew "qmk/qmk/qmk"
+brew "stripe/stripe-cli/stripe"
 # Command-line interface for 1Password
 cask "1password-cli"
 # Terminal-based AI coding assistant
