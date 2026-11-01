@@ -8,7 +8,7 @@ macOS development environment managed with [chezmoi](https://www.chezmoi.io/).
 brew install chezmoi
 chezmoi init <your-git-repository-url>
 brew bundle --file "$(chezmoi source-path)/Brewfile"
-# (任意) 旧マシンで入れていた全パッケージ
+# (任意) 旧マシンで入れていた全パッケージ (brew bundle dump, VS Code 拡張含む)
 brew bundle --file "$(chezmoi source-path)/Brewfile.full"
 chezmoi apply
 nvim

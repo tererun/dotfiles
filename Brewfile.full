@@ -1,74 +1,185 @@
-# Cellar の INSTALL_RECEIPT / brew list --cask から生成 (2026-11-02)
-# 復元: brew bundle --file Brewfile.full
 tap "anomalyco/tap"
 tap "gcenx/wine"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "qmk/qmk"
 tap "stripe/stripe-cli"
-tap "the-wineskin-project/wineskin"
+tap "the-wineskin-project/wineskin", "https://github.com/The-Wineskin-Project/homebrew-wineskin"
+# User-friendly launcher for Bazel
 brew "bazelisk"
+# Get/set bluetooth power and discoverable state
 brew "blueutil"
+# Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
+# Cross-platform make
 brew "cmake"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
-brew "ffmpeg"
-brew "flow-cli"
-brew "fontforge"
-brew "fzf"
-brew "gcc"
-brew "gh"
-brew "ghq"
-brew "git-lfs"
-brew "git"
-brew "gnuplot"
-brew "gstreamer"
-brew "iperf3"
-brew "jadx"
-brew "jenv"
-brew "k6"
-brew "lazygit"
-brew "libplist"
-brew "marp-cli"
-brew "mingw-w64"
-brew "neovim"
-brew "nmap"
-brew "anomalyco/tap/opencode"
-brew "openjdk@11"
-brew "openjdk@17"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-brew "pandoc"
-brew "pdfcrack"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Command-line interface that provides utilities for building Flow applications
+brew "flow-cli"
+# Command-line outline and bitmap font editor/converter
+brew "fontforge"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Remote repository management made easy
+brew "ghq"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Command-driven, interactive function plotting
+brew "gnuplot"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Development framework for multimedia applications
+brew "gstreamer"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Dex to Java decompiler
+brew "jadx"
+# Manage your Java environment
+brew "jenv"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Library for Apple Binary- and XML-Property Lists
+brew "libplist"
+# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
+brew "marp-cli"
+# Minimalist GNU for Windows and GCC cross-compilers
+brew "mingw-w64"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Development kit for the Java programming language
+brew "openjdk@11"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# PDF files password cracker
+brew "pdfcrack"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# Cross-platform library for audio I/O
 brew "portaudio"
+# Python version management
 brew "pyenv"
+# Python interface to Tcl/Tk
 brew "python-tk@3.13"
-brew "qmk/qmk/qmk"
+# Tools for and transforming and inspecting PDF files
 brew "qpdf"
+# Ruby version manager
 brew "rbenv"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Utility that provides fast incremental file transfer
 brew "rsync"
+# Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Cross-shell prompt for astronauts
 brew "starship"
+# CLI for extracting streams from various websites to a video player
 brew "streamlink"
-brew "stripe/stripe-cli/stripe"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode", trusted: true
+# Command-line interface for 1Password
 cask "1password-cli"
+# Terminal-based AI coding assistant
 cask "claude-code"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# NDI SDK
 cask "libndi"
+# Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Full TeX Live distribution without GUI applications
 cask "mactex-no-gui"
+# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# GUI for rsync
 cask "rsyncui"
 cask "wineskin"
+# Adobe extensions installer
 cask "zxpinstaller"
+vscode "anysphere.cpptools"
+vscode "anysphere.csharp"
+vscode "anysphere.cursorpyright"
+vscode "anysphere.remote-containers"
+vscode "anysphere.remote-ssh"
+vscode "biomejs.biome"
+vscode "bradlc.vscode-tailwindcss"
+vscode "catppuccin.catppuccin-vsc"
+vscode "chadalen.vscode-jetbrains-icon-theme"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
+vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
+vscode "factory.factory-vscode-extension"
+vscode "fralle.copy-code-context"
+vscode "geequlim.godot-tools"
+vscode "github.vscode-pull-request-github"
+vscode "jdinhlife.gruvbox"
+vscode "k--kato.intellij-idea-keybindings"
+vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "local.lazyjp"
+vscode "marp-team.marp-vscode"
+vscode "mechatroner.rainbow-csv"
+vscode "minecraftcommands.syntax-mcfunction"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.hexeditor"
+vscode "ms-vscode.makefile-tools"
+vscode "oven.bun-vscode"
+vscode "parallelsdesktop.parallels-desktop"
+vscode "postman.postman-for-vscode"
+vscode "prisma.prisma"
+vscode "redhat.java"
+vscode "ritwickdey.liveserver"
+vscode "rooveterinaryinc.roo-cline"
+vscode "spgoding.datapack-language-server"
+vscode "tomoki1207.pdf"
+vscode "vadimcn.vscode-lldb"
+vscode "vscjava.vscode-gradle"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vue.volar"
+vscode "wakatime.vscode-wakatime"
+npm "corepack"
+npm "firebase-tools"
