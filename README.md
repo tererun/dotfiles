@@ -8,6 +8,8 @@ macOS development environment managed with [chezmoi](https://www.chezmoi.io/).
 brew install chezmoi
 chezmoi init <your-git-repository-url>
 brew bundle --file "$(chezmoi source-path)/Brewfile"
+# (任意) 旧マシンで入れていた全パッケージ
+brew bundle --file "$(chezmoi source-path)/Brewfile.full"
 chezmoi apply
 nvim
 ```
@@ -18,6 +20,16 @@ Run `:checkhealth` if something does not start correctly.
 Git identity and signing settings belong in `~/.gitconfig.local`. This file is
 intentionally not managed, so public dotfiles never expose machine-specific
 identity settings.
+
+## Managed files
+
+- zsh: `.zshrc`, `.zprofile`, `.zshenv`
+- Neovim: `.config/nvim`
+- Git: `.gitconfig`, `.config/git/ignore`
+- GitHub CLI: `.config/gh/config.yml` (認証情報は keyring にあり含まない)
+- Karabiner-Elements: `.config/karabiner/karabiner.json`
+- Zed: `.config/zed/settings.json`, `keymap.json`
+- Ghostty: `Library/Application Support/com.mitchellh.ghostty/config`
 
 ## Daily use
 

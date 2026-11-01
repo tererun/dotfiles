@@ -61,3 +61,5 @@ alias gl='git log --oneline --decorate --graph -20'
 alias vim='nvim'
 alias g++='g++-15'
 
+# Unity CLI
+[[ -f "$HOME/.unity/env" ]] && . "$HOME/.unity/env"
