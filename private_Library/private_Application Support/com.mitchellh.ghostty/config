@@ -42,6 +42,7 @@ font-family = "Hiragino Kaku Gothic ProN"
 # background = #123abc
 #
 theme = Miasma
+shell-integration-features = ssh-env,ssh-terminfo
 # # Empty values are used to reset config keys to default.
 # key =
 #
