@@ -16,9 +16,3 @@ path+=(
   "$ANDROID_SDK_ROOT/platform-tools"
 )
 
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-
-command -v rbenv >/dev/null && eval "$(rbenv init - --no-rehash zsh)"
-

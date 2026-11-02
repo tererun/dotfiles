@@ -9,18 +9,11 @@ export LESS='-R'
 path=(
   "$HOME/.local/bin"
   "$HOME/.bun/bin"
-  "$HOME/.jenv/bin"
-  "$HOME/.pyenv/bin"
   $path
 )
 
-export BUN_INSTALL="$HOME/.bun"
-export PYENV_ROOT="$HOME/.pyenv"
-
-command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
-command -v jenv >/dev/null && eval "$(jenv init -)"
-
-[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
+# Language runtimes (node, python, java, bun, ...) are managed by mise.
+command -v mise >/dev/null && eval "$(mise activate zsh)"
 
 # Google Cloud SDK installed from the standalone archive.
 for cloud_sdk_dir in "$HOME/google-cloud-sdk" "$HOME/Downloads/google-cloud-sdk"; do

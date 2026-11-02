@@ -48,7 +48,6 @@ brew "iperf3"
 # Dex to Java decompiler
 brew "jadx"
 # Manage your Java environment
-brew "jenv"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
 # Simple terminal UI for git commands
@@ -56,33 +55,27 @@ brew "lazygit"
 # Library for Apple Binary- and XML-Property Lists
 brew "libplist"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
-brew "marp-cli"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
 # Development kit for the Java programming language
-brew "openjdk@11"
 # Development kit for the Java programming language
-brew "openjdk@17"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # PDF files password cracker
 brew "pdfcrack"
 # Fast, disk space efficient package manager
-brew "pnpm"
 # Cross-platform library for audio I/O
 brew "portaudio"
 # Python version management
-brew "pyenv"
 # Python interface to Tcl/Tk
-brew "python-tk@3.13"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Ruby version manager
-brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Utility that provides fast incremental file transfer

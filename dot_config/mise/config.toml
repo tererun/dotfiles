@@ -1,0 +1,13 @@
+# Global tool versions. Projects can override them with mise.toml
+# (or .nvmrc / .python-version / .java-version, see below).
+[tools]
+node = "lts"
+python = "3.13"
+java = "temurin-17"
+bun = "latest"
+pnpm = "latest"
+"npm:@marp-team/marp-cli" = "latest"
+
+[settings]
+# Keep honoring the version files that nvm / pyenv / jenv / rbenv used to read.
+idiomatic_version_file_enable_tools = ["node", "python", "java", "ruby"]
